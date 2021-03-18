@@ -1,0 +1,5 @@
+package com.unit.product.config;
+
+public class SwaggerConfig {
+
+}

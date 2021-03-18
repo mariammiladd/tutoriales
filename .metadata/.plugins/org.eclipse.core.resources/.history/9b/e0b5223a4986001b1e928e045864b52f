@@ -1,0 +1,5 @@
+package com.init.products.entityes;
+
+public class Product {
+
+}

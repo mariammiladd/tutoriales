@@ -1,0 +1,39 @@
+package com.tutorial.rest;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.tutorial.dao.PersonaDAO;
+import com.tutorial.model.Persona;
+
+@RestController
+@RequestMapping("personas")
+public class PersonaREST {
+   @Autowired
+   private PersonaDAO personaDAO;
+   
+   
+	@PostMapping(value="/guardar")
+	public ResponseEntity<Persona> createPersona(@RequestBody Persona persona) {
+		Persona newPersona = personaDAO.save(persona);
+		return ResponseEntity.ok(newPersona);
+	}
+   
+   
+	@RequestMapping(value = "{productId}") 
+	public ResponseEntity<Persona> getPersona(@PathVariable("productId")Integer productId) {
+		Optional<Persona> product = personaDAO.findById(productId);
+		if (!product.isPresent()) {
+			return ResponseEntity.noContent().build();
+		} else {
+			return ResponseEntity.ok(product.get());
+		}
+	}
+}

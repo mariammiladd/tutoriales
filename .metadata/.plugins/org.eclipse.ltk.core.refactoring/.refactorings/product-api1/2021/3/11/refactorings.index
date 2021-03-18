@@ -1,0 +1,9 @@
+1615892760839	Delete element
+1615893398871	Rename package 'com.init.products.entities'
+1615893451883	Encapsulate field 'id'
+1615893456620	Encapsulate field 'name'
+1615979326048	Delete element
+1615981172981	Rename package 'com.init.products.entityes'
+1615981387925	Rename package 'com.init.rest'
+1616011930176	Delete element
+1616065240028	Rename package 'com.unit.product.config'
