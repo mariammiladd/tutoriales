@@ -7,3 +7,8 @@
 1615981387925	Rename package 'com.init.rest'
 1616011930176	Delete element
 1616065240028	Rename package 'com.unit.product.config'
+1616147084492	Encapsulate field 'id'
+1616147089199	Encapsulate field 'nombre'
+1616147093596	Encapsulate field 'clave'
+1616150482850	Copy compilation unit
+1616150489177	Delete element
