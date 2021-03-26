@@ -10,11 +10,13 @@ import javax.persistence.ManyToOne;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @Setter
 @AllArgsConstructor
+@NoArgsConstructor
 @Entity
 public class Reserva {
 	@Id
@@ -25,4 +27,8 @@ public class Reserva {
 	@ManyToOne
 	@JoinColumn(name = "idClase")
 	private Clase idClase;
+
+	@ManyToOne
+	@JoinColumn(name = "idPersona")
+	private Persona idPersona;
 }

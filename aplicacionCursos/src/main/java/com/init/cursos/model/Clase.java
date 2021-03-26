@@ -1,7 +1,5 @@
 package com.init.cursos.model;
 
-import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -32,6 +30,4 @@ public class Clase {
 	@Column(name = "name", nullable = false)
 	private String name;
 
-	@Column(name = "fecha", nullable = false)
-	private Date fecha;
 }
